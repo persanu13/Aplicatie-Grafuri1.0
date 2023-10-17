@@ -1,0 +1,96 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+body{
+  overflow: hidden;
+  background-color:aliceblue;
+}
+
+.App{
+  height: 99vh;
+  width: 99vw;
+  user-select: none;
+  position: relative;
+}
+
+.Nod {
+  display: flex;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  border-radius: 90%;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  border: solid black 3px;
+  transition: background-color 0.5s ease;
+  font-family:cursive;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.titlu{
+  text-align: center;
+  font-weight: bold;
+  text-shadow:5px 5px 8px gray;
+  font-family: cursive;
+  font-size: 40px;
+  margin-top: 3px;
+  letter-spacing: 2px;
+}
+
+.coordonate{
+  position: fixed;
+  bottom: 0;
+  font-weight: bolder;
+  font-family: cursive;
+}
+
+.Line{
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+}
+
+.LineO::before{
+  content: "";
+  position: absolute;
+  height: 50px;
+  width: 30px;
+  left: -12px;
+  bottom: -25px;
+  clip-path: polygon(50% 65%, 100% 50%, 50% 100%, 0% 50%);
+  background-color:rgb(245, 19, 136);
+  z-index: 2;
+}
+
+.buttons{
+  position: fixed;
+  bottom: 5px;
+  right: 600px;
+  width: 400px;
+  display: flex;
+  justify-content:space-around;
+}
+
+.buttons button{
+        width: 100px;
+        height: 30px;
+        font-size: 16px;
+        font-family:monospace;
+        font-weight: bold;
+        border: solid 3px;
+        background-color: #46A4E4;
+        color: rgb(0, 0, 0);
+        border: 3px black dashed;
+        box-shadow: 3px 3px 10px #46A4E4,
+                    inset 2px 2px 0px white;
+        cursor: pointer;
+        transition: 0.3s;
+}
+
+.buttons button:hover{
+  background-color: #5D63BF;
+  box-shadow: 0px 0px 10px  #5D63BF,
+  inset 2px 2px 0px white;
+}
